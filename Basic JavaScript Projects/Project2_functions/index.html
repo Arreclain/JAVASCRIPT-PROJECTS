@@ -4,12 +4,15 @@
         <meta charset="UTF-8">
     </head>
 <body>
-    <script src="JS/main.js"></script>
-    <button type="button" onclick="changeName()">I'm the Button!</button>
+    <script src="JS/main.js"></script> <!--Loads in those vital scripts  : )  -->
 
-  <p  id="JS-Target">
-</p>
-<p id="JS-Hover" onmouseover="concatonate()">Hover your mouse here...</p>
+    
+    <button type="button" onclick="reset()">I reset the page!</button>  <!--Triggers a script that resets the contents of the paragraph below-->
+    <!--It does so via the function reset() which is triggered by clicking the button.-->
+
+
+    <!--This paragraph, when moused over, calls concatonate() which adds text to the paragraph's insides.-->
+<p id="JS-Target" onmouseover="concatonate()">Hover your mouse here...</p>
 </body>
 
 </html>
