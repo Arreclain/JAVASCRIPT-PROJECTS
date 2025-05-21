@@ -5,24 +5,33 @@
 </head>
 <body>
     <p>Is this even opening?</p>
-   <button type="button" onclick="doMath(10)">I run the script!</button>  <!--Triggers a script that resets the contents of the paragraph below-->
+   <button type="button" onclick="doMath(10)">I run the script!</button>  <!--Calls the doMath() function, to do simple arithmetic-->
+
+    <!--This block of p tags catches the results for printing purposes.-->
     <p id="Math"></p>
     <p id="Anti-Math"></p>
     <p id="MakeBig"></p>
     <p id="MakeSmall"></p>
+
+    <!--A sassy prompt for using modulus, triggered by the button that calls a fuction that uses modulus.-->
     <h4>Alright, wise-guy!  Try to solve this!  (3*10 + 6/2)%10!</h4>
-    <button type="button" onclick="bigMaths()">Be the wise-guy!</button>
-    <p id="its3guys"></p>
+    <button type="button" onclick="bigMaths()">Be the wise-guy!</button> <!--Runs the function.-->
+    <p id="its3guys"></p> <!--Holds the result-->
+
+    <!--  : (  -->
     <h5>Well, okay, can you make a number negative?</h5>
-    <button type="button" onclick="bigSigh()">The Biggest Sigh</button>
+    <button type="button" onclick="bigSigh()">The Biggest Sigh</button> <!--Runs the function.-->
     <p id="disappointment"></p>
     <br>
     <br>
+    <!--An uncomfortably *not* self-aware prompt that tries to change the subject.-->
     <h4>Wow, way too personal.  How about you show me some incrementing and decrementing.  Or however it's spelled.</h4>
-    <button type="button" onclick="aWhileLoop(3,4)"> : [ </button>
-    <div id="looped"></div>
+    <button type="button" onclick="aWhileLoop(3,4)"> : [ </button> <!--Calls the function.-->
+    <div id="looped"></div> <!--Holds the result-->
+
+    <!--A desperate bid to outdo me sort of a prompt-->
     <h4>Well, if you're so smart, what's my power level?</h4>
-        <button type="button" onclick="powerlevel()"> : [] </button>
-    <div id="powerLevel"></div>
+        <button type="button" onclick="powerlevel()"> : [] </button>  <!--This calls the function-->
+    <div id="powerLevel"></div> <!--With DBZ power scaling, there is no way this result is going to be even remotely impressive.  Not even in the first season.-->
 </body>
 </html>
