@@ -5,14 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <script src="JS/main.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-<p onclick="coercion()">Coerce?</p> <!--Triggers the JavaScript-->
+<p class = "clickable" onclick="coercion()">Coerce?</p> <!--Triggers the JavaScript-->
 
 <p id="aResults">Words Should Go Here</p>
 <p id="bResults">Words Should Go Here</p>
+<br>
+<h3>Below should Read, in Descending order: NaN, true, and false.</h3>
+<p id="naanIsBread"></p>
+<p id="correct"></p>
+<p id="incorrect"></p>
 
+<h3>Below should Read, in Descending order: infinity, and negative infinity.</h3>
+<p id="toInfinity"></p>
+<p id="andBeyond"></p>
+
+<p class = "clickable" onclick="booleans()">True or False</p> <!--Triggers the JavaScript-->
+<h3>Is there a Cat in the Box?</h3>
+<h5>This is true if X is even, and false if X is less than 20. So, is there a cat?</h5>
+<p id="theBox"></p>
 </body>
 
 </html>
