@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--Shift+Alt+I-->
+<!--ctrl+Shift+I-->
+<!--Ctrl+Shift+I pulls up console on webpages on a top tab of the new window.-->
+
 <head>
     <meta charset="UTF-8">
     <script src="JS/main.js"></script>
@@ -9,24 +11,45 @@
 </head>
 
 <body>
-<p class = "clickable" onclick="coercion()">Coerce?</p> <!--Triggers the JavaScript-->
+    <p class="clickable" onclick="coercion()">Coerce?</p> <!--Triggers the JavaScript-->
 
-<p id="aResults">Words Should Go Here</p>
-<p id="bResults">Words Should Go Here</p>
-<br>
-<h3>Below should Read, in Descending order: NaN, true, and false.</h3>
-<p id="naanIsBread"></p>
-<p id="correct"></p>
-<p id="incorrect"></p>
+    <p id="aResults">Words Should Go Here</p>
+    <p id="bResults">Words Should Go Here</p>
+    <br>
+    <h3>Below should Read, in Descending order: NaN, true, and false.</h3>
+    <p id="naanIsBread"></p>
+    <p id="correct"></p>
+    <p id="incorrect"></p>
 
-<h3>Below should Read, in Descending order: infinity, and negative infinity.</h3>
-<p id="toInfinity"></p>
-<p id="andBeyond"></p>
+    <h3>Below should Read, in Descending order: infinity, and negative infinity.</h3>
+    <p id="toInfinity"></p>
+    <p id="andBeyond"></p>
 
-<p class = "clickable" onclick="booleans()">True or False</p> <!--Triggers the JavaScript-->
-<h3>Is there a Cat in the Box?</h3>
-<h5>This is true if X is even, and false if X is less than 20. So, is there a cat?</h5>
-<p id="theBox"></p>
+    <p class="clickable" onclick="booleans()">True or False</p> <!--Triggers the JavaScript-->
+    <h3>Is there a Cat in the Box?</h3>
+    <h5>This is true if X is even, and false if X is less than 20. So, is there a cat?</h5>
+    <p id="theBox"></p>
+    <br>
+    <br>
+    <h3>The Triple equals sign looks exceedingly niche to me.</h3>
+    <h4>Yeah, almost like in was a necessity created by oversights earlier in the language's creation.</h4>
+    <h4>Anyway, below should display true, false, false,false.</h4>
+    <p class="clickable" onclick="madness()">I check things!</p>
+    <table>
+        <tr>
+            <td id="sameTypeData">
+
+            </td>
+            <td id="differentBoth">
+
+            </td>
+            <td id="sameType">
+
+            </td>
+            <td id="sameData">
+
+            </td>
+    </table>
 </body>
 
 </html>
