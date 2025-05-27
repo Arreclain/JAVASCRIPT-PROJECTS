@@ -59,8 +59,9 @@ function moreMadness(){
     write("orCompareFalse", b%5 == 0, b > 10);
 }
 
-function notCompare(firstNumber,secondNumber){
-    //let c = 8;
+function notCompare(){
+    var firstNumber = document.getElementById("firstNumber").value;
+    var secondNumber = document.getElementById("secondNumber").value;
     alert("A = " + firstNumber + " and B = "+ secondNumber);
     //alert("Is it possible to display a value? "+ c);
     write("compareResults",!(firstNumber < secondNumber));
