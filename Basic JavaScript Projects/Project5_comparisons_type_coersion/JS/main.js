@@ -48,3 +48,20 @@ function madness() {
     write("sameData", a === b);
 
 }
+
+function moreMadness(){
+    let a = 3;
+    let b = 4;
+
+    write("andCompareTrue", a%3==0 && a >= 2);
+    write("andCompareFalse", a%3==0 && a >= 5);
+    write("orCompareTrue", b%2==0 || b > 20);
+    write("orCompareFalse", b%5 == 0, b > 10);
+}
+
+function notCompare(firstNumber,secondNumber){
+    //let c = 8;
+    alert("A = " + firstNumber + " and B = "+ secondNumber);
+    //alert("Is it possible to display a value? "+ c);
+    write("compareResults",!(firstNumber < secondNumber));
+}

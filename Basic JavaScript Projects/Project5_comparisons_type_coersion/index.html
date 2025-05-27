@@ -35,6 +35,8 @@
     <h4>Yeah, almost like in was a necessity created by oversights earlier in the language's creation.</h4>
     <h4>Anyway, below should display true, false, false,false.</h4>
     <p class="clickable" onclick="madness()">I check things!</p>
+    <br>
+    <p class="clickable" onclick="moreMadness()">I also add to the table!</p>
     <table>
         <tr>
             <td id="sameTypeData">
@@ -47,9 +49,32 @@
 
             </td>
             <td id="sameData">
+            </td>
+        </tr>
+        <tr>
+            <td id="andCompareTrue">
 
             </td>
+            <td id="andCompareFalse">
+
+            </td>
+            <td id="orCompareTrue">
+
+            </td>
+            <td id="orCompareFalse">
+            </td>
+        </tr>
     </table>
+    <h3>Okay, so let's play with not!</h3>
+    <form>
+        <input type="number" id="firstNumber" name="firstNumber" min="1" max="10">
+        <h5>Is not smaller than...</h5>
+        <input type="number" id="secondNumber" name="secondNumber" min="1" max="10">
+    </form>
+    <button onclick="notCompare(firstNumber,secondNumber)">Compare Values!</button>
+    
+    <p id="compareResults">Results will appear here!</p>
+
 </body>
 
 </html>
