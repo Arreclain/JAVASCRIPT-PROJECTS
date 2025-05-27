@@ -56,7 +56,7 @@ function moreMadness(){
     write("andCompareTrue", a%3==0 && a >= 2);
     write("andCompareFalse", a%3==0 && a >= 5);
     write("orCompareTrue", b%2==0 || b > 20);
-    write("orCompareFalse", b%5 == 0, b > 10);
+    write("orCompareFalse", b%5 == 0 || b > 10);
 }
 
 function notCompare(){
