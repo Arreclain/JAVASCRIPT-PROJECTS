@@ -7,18 +7,30 @@
     <title>Project 7</title>
 </head>
 
+<!--onload doesn't trigger from a paragraph, so it's attached to the body.  It is needed for the timer.-->
+
 <body onload="startClock()">
+    <!--The first time based script.  it runs once and outputs the time in hours:minutes.-->
     <p>Click to update local time.</p>
+
+
+
+    <!--This paragraph is the trigger.-->
     <p id="clock" onclick="updateTime()">Click here, specifically.</p>
     <br>
+    <!--This is a requested block of code.  The paragraph informs the reader, the button triggers the function.-->
     <p id="Time_of_Day"></p>
     <button onclick="timeFunction()">Click here for more Time.</button>
-        <br>
+    <br>
+
+
+    <!--This html supports the whole bakery set of code.  Text goes into the paragraph, the button calls a function.  Whee.-->
     <p>Local Bread in Milan is:</p>
     <p id="breadReport"></p>
     <button onclick="bakery()">Bake More Bread</button>
     <br>
     <br>
+    <!--Now we're at the good stuff.  This is the exposition paragraph.-->
     <h2>Now onward to the fun stuff.</h2>
     <p>Below are many check boxes. Each one is a wire.<br>
         Below is also a timer. What does it do? Nothing.<br>
@@ -28,8 +40,10 @@
         <i>You know what to do.</i>
     </p>
     <div>
+        <!--Here lies the timer.  It will start 1 second from the page loading, and counts for 2 minutes in time.-->
         <p id="countdownTimer"></p>
         <br>
+        <!--These are your ten wires.  A random, genuinely random, one of them will stop the timer.-->
         <div>
             <input type="checkbox" name="wire1" id="wire1"> <label for="wire1">A grey wire</label><br>
             <input type="checkbox" name="wire2" id="wire2"> <label for="wire2"></label>A grey wire<br>
