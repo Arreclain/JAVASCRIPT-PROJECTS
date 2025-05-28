@@ -15,5 +15,10 @@ function bakery() {
     document.getElementById("breadReport").innerHTML = "Milan has " + townBread +" loaves of bread from this one bakery.";
 }
 
-
+function updateTime(){
+    const hours = new Date().getHours();
+    const minutes = new Date().getMinutes();
+    document.getElementById("clock").innerHTML = "The local time is: " + hours + ":" + minutes;
+//    alert("Event triggered.");
+}
 
