@@ -7,10 +7,13 @@
     <title>Project 7</title>
 </head>
 
-<body>
+<body onload="startClock()">
     <p>Click to update local time.</p>
     <p id="clock" onclick="updateTime()">Click here, specifically.</p>
     <br>
+    <p id="Time_of_Day"></p>
+    <button onclick="timeFunction()">Click here for more Time.</button>
+        <br>
     <p>Local Bread in Milan is:</p>
     <p id="breadReport"></p>
     <button onclick="bakery()">Bake More Bread</button>
@@ -25,19 +28,19 @@
         <i>You know what to do.</i>
     </p>
     <div>
-        <p id="countdownTimer" onload="startClock()"></p>
+        <p id="countdownTimer"></p>
         <br>
         <div>
-            <input type="checkbox"><label for="wire1" name="wire1">A grey wire</label><br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire2"> <label for="wire2"></label>A grey wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire3"> <label for="wire3"></label>A blue wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire4"> <label for="wire4"></label>A black wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire5"> <label for="wire5"></label>A grey wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire6"> <label for="wire6"></label>A green wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire7"> <label for="wire7"></label>A blue wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire8"> <label for="wire8"></label>A blue wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire9"> <label for="wire9"></label>A grey wire<br>
-            <p id="countdownTimer"></p><input type="checkbox" name="wire10"> <label for="wire10"></label>A grey wire<br>
+            <input type="checkbox" name="wire1" id="wire1"> <label for="wire1">A grey wire</label><br>
+            <input type="checkbox" name="wire2" id="wire2"> <label for="wire2"></label>A grey wire<br>
+            <input type="checkbox" name="wire3" id="wire3"> <label for="wire3"></label>A blue wire<br>
+            <input type="checkbox" name="wire4" id="wire4"> <label for="wire4"></label>A black wire<br>
+            <input type="checkbox" name="wire5" id="wire5"> <label for="wire5"></label>A grey wire<br>
+            <input type="checkbox" name="wire6" id="wire6"> <label for="wire6"></label>A green wire<br>
+            <input type="checkbox" name="wire7" id="wire7"> <label for="wire7"></label>A blue wire<br>
+            <input type="checkbox" name="wire8" id="wire8"> <label for="wire8"></label>A blue wire<br>
+            <input type="checkbox" name="wire9" id="wire9"> <label for="wire9"></label>A grey wire<br>
+            <input type="checkbox" name="wire10" id="wire10"> <label for="wire10"></label>A grey wire<br>
         </div>
     </div>
 </body>
