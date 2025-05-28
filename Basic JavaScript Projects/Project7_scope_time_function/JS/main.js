@@ -26,8 +26,8 @@ function updateTime(){
 
 function startClock(){
     alert("A timer has started");
-    setInterval(decriment,1000);
-    function decriment(){
+    //setInterval(decriment,1000);
+    /*function decriment(){
         seconds--;
         if (seconds < 0){
             seconds = 59;
@@ -40,6 +40,6 @@ function startClock(){
             minutes--;
         }
         document.getElementById("countdownTimer").innerHTML = minutes + ":" + seconds;
-    }
+    } */
 
 }
