@@ -1,6 +1,10 @@
 /*Okay, an important reminder:  * means everything. Everything has border-box.*/
 * {
-    box-sizing: border-box
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #4d4b4b;
 }
 
 .slideshowDivMain {
