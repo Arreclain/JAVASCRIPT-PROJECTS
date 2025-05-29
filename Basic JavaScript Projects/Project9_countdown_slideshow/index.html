@@ -1,20 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8" />
     <title>Project 9</title>
 </head>
+
 <body>
+    <!--Timer work here-->
     <p>How many seconds would you like to set your alarm for?</p>
     <input id="seconds" value="" min="1" max="999">
     <button onclick="countdown()">Start Timer</button>
     <p id="timer"></p>
 
-
-
-
+    <!--Slideshow work here-->
+    <div id="slideshowDivMain">
+        <div class="slide fade">
+            <div class="slideNumber">1 of 3</div>
+            <img src="images/car1.jpg" class="carSlide" alt="A blue sport car, labeled number 27.">
+        </div>
+        <div class="slide fade">
+            <div class="slideNumber">2 of 3</div>
+            <img src="images/car2.jpg" class="carSlide" alt="A Bentley type car.">
+        </div>
+        <div class="slide fade">
+            <div class="slideNumber">3 of 3</div>
+            <img src="images/car3.jpg" class="carSlide" alt="A red car in a parking lot.">
+        </div>
+        <br>
+        <!--This is the button area for the slideshow-->
+        <a class="prev" onclick="changeSlide(-1)"><!--A Special Character-->&#10094</a>
+        <a class="next" onclick="changeSlide(1)"><!--A Different Special Character-->&#10095</a>
 
         <script src="JS/main.js"></script>
+    </div>
+    <!--Implements the dots?-->
+    <div id="slideShowDivDots">
+        <span class="dot" onclick="currentSlide(1)"><!--Jumps to Slide 1--></span>
+        <span class="dot" onclick="currentSlide(2)"><!--Jumps to Slide 2--></span>
+        <span class="dot" onclick="currentSlide(3)"><!--Jumps to Slide 3--></span>
+    </div>
 </body>
+
 </html>

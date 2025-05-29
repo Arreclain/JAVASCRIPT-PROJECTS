@@ -1,0 +1,75 @@
+/*Okay, an important reminder:  * means everything. Everything has border-box.*/
+* {
+    box-sizing: border-box
+}
+
+.slideshowDivMain {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/*A slideshow doesn't work if they're always all showing.*/
+.slide {
+    display: none;
+}
+
+/*Messing with some of these things can be foolish, but I'm trying to find things to change.*/
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top:  10px;  /*I don't want it to sit on top of timer.*/
+    padding: 16px;
+    color: white;  /*Sure, why not.*/
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.5s ease;
+    border-radius:  0 4px 4px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+/*I'm omitting the preview hover effect.*/
+/*I'm not adding captions*/
+
+.slideNumber{
+    color: azure;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: cadetblue;
+    border-radius: 50%;
+    display: inline-block;  /*Like, if I change list line, I'm gonna regret it.*/
+    transition: background-color 0.5s ease;
+}
+
+.active, /*Which gets added by the JS code*/.dot:hover{
+    background-color: #717171;
+}
+
+/*The fading animation*/
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/*Animation Name "fade" which is referenced above, is basically built here.*/
+@keyframes fade{
+    from{opacity: .4}
+    to{opacity: 1}
+}
