@@ -1,3 +1,4 @@
+//Timer work.
 function countdown() {
     var seconds = document.getElementById("seconds").value;
 
@@ -15,4 +16,40 @@ function countdown() {
         }
     }
     tick();
+}
+
+//Slideshow work.
+let slideIndex = 1;
+showSlides(slideIndex);
+
+//Changes the slideIndex and calls showSlides via arrows.
+function changeSlide(x) {
+    showSlides(slideIndex += x);
+}
+
+//Activating slides via Dots.
+function currentSlide(x) {
+    showSlides(SlideIndex = x);
+}
+
+function showSlides(x) {
+    let i;
+    let slides = document.getElementsByClassName("carSlide");
+    console.log("This many slides: "+slides.length);
+    let dots = document.getElementsByClassName("dot");
+    if(x>slides.length){
+        slideIndex=1;
+    }
+    if(x<1){
+        slideIndex=slides.length;
+    }
+
+    for(i = 0; i < slides.length; i++){
+        slides[i].style.display="none";
+    }
+    for(i=0;i<dots.length;i++){
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
 }
