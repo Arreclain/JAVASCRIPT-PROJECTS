@@ -29,13 +29,12 @@ function changeSlide(x) {
 
 //Activating slides via Dots.
 function currentSlide(x) {
-    showSlides(SlideIndex = x);
+    showSlides(slideIndex = x);
 }
 
 function showSlides(x) {
     let i;
-    let slides = document.getElementsByClassName("carSlide");
-    console.log("This many slides: "+slides.length);
+    let slides = document.getElementsByClassName("slide");
     let dots = document.getElementsByClassName("dot");
     if(x>slides.length){
         slideIndex=1;
@@ -50,6 +49,7 @@ function showSlides(x) {
     for(i=0;i<dots.length;i++){
         dots[i].className = dots[i].className.replace(" active", "");
     }
+    alert("slides is a "+typeof(slides) +"and slideIndex is a "+typeof(slideIndex)+" value of "+slideIndex);
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
 }
