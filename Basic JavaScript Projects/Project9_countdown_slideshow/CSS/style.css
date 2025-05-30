@@ -4,12 +4,13 @@
 }
 
 /*So my cursors are visible.*/
-body{
+body {
     background-color: #4d4b4b;
 }
 
-.slideshowDivMain {
-    max-width: 1000px;
+/*Keeps the pictures the pictures centered.*/
+#slideshowDivMain {
+    max-width: 650px;
     position: relative;
     margin: auto;
 }
@@ -26,17 +27,18 @@ body{
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top:  10px;
-    padding: 120px;
-    color: white;  /*Sure, why not.*/
+    margin-top: 10px;
+    padding-right: 40px;  /*The padding is helping keep the arrows in position.*/
+    padding-left: 40px;
+    color: white;
     font-weight: bold;
     font-size: 20px;
     transition: 0.5s ease;
-    border-radius:  0 4px 4px 0;
+    border-radius: 0 4px 4px 0;
     user-select: none;
 }
 
-.next{
+.next {
     right: 0;
     border-radius: 4px 0 0 4px;
 }
@@ -44,37 +46,44 @@ body{
 /*I'm omitting the preview hover effect.*/
 /*I'm not adding captions*/
 
-.slideNumber{
+.slideNumber {
     color: azure;
-    font-size: 18px;
-    padding: 400px 300px;
+    font-size: 18px;  /*I used the inpect element on the page to get the font size and the padding numbers.*/
+    padding: 430px 297px;
     position: absolute;
     top: 0;
 }
 
-.dot{
+.dot {  /*I haven't gotten them to center, but it's small thing, and I'm going to try to view it as such.  Everything else works as intended.*/
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
     background-color: cadetblue;
     border-radius: 50%;
-    display: inline-block;  /*Like, if I change list line, I'm gonna regret it.*/
+    display: inline-block;
     transition: background-color 0.5s ease;
 }
 
-.active, /*Which gets added by the JS code*/.dot:hover{
+.active,
+/*.active is a class which gets added by the JS code*/
+.dot:hover {
     background-color: #717171;
 }
 
 /*The fading animation*/
-.fade{
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
 /*Animation Name "fade" which is referenced above, is basically built here.*/
-@keyframes fade{
-    from{opacity: .4}
-    to{opacity: 1}
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
