@@ -3,6 +3,7 @@
     box-sizing: border-box;
 }
 
+/*So my cursors are visible.*/
 body{
     background-color: #4d4b4b;
 }
@@ -25,8 +26,8 @@ body{
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top:  10px;  /*I don't want it to sit on top of timer.*/
-    padding: 16px;
+    margin-top:  10px;
+    padding: 120px;
     color: white;  /*Sure, why not.*/
     font-weight: bold;
     font-size: 20px;
@@ -45,8 +46,8 @@ body{
 
 .slideNumber{
     color: azure;
-    font-size: 12px;
-    padding: 8px 12px;
+    font-size: 18px;
+    padding: 400px 300px;
     position: absolute;
     top: 0;
 }

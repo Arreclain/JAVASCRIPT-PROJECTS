@@ -2,26 +2,21 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">  <!--ONLY LINK THE CSS HERE-->
+    <!--This gap exists because I removed the JavaScript link from here.  It was calling functions before the page loaded.-->
     <meta charset="UTF-8" />
     <title>Project 9</title>
 </head>
 
 <body>
-    <!--Timer work here-->
-    <p>How many seconds would you like to set your alarm for?</p>
-    <input id="seconds" value="" min="1" max="999">
-    <button onclick="countdown()">Start Timer</button>
-    <p id="timer"></p>
 
     <!--Slideshow work here-->
     <div id="slideshowDivMain">
-        <div class="slide fade">
+        <div class="slide fade">  <!--These divs switch out for which one is visible.  My undestanding is that they are all stacked, but only on is visible at a time.-->
             <div class="slideNumber">1 of 3</div>
             <img src="images/car1.jpg" class="carSlide" alt="A blue sport car, labeled number 27.">
         </div>
-        <div class="slide fade">
+        <div class="slide fade"> <!--Since it's an array starting at slides[1], this is the first car.-->
             <div class="slideNumber">2 of 3</div>
             <img src="images/car2.jpg" class="carSlide" alt="A Bentley type car.">
         </div>
@@ -42,7 +37,15 @@
         <span class="dot" onclick="currentSlide(2)"><!--Jumps to Slide 2--></span>
         <span class="dot" onclick="currentSlide(3)"><!--Jumps to Slide 3--></span>
     </div>
-     <script src="JS/main.js"></script>
+
+    <!--Timer work here-->
+    <p>How many seconds would you like to set your alarm for?</p>
+    <input id="seconds" value="" min="1" max="999"> <!--Source of data for the timer.  I added a min and max so zero and negative aren't possible.-->
+    <button onclick="countdown()">Start Timer</button> <!--Calls function for timer.-->
+    <p id="timer"></p>  <!--Displays the timer, but only while it is active.-->
+
+
+    <script src="JS/main.js"></script>  <!--This line needs to stay at the bottom.  Apparently onload is not a thing people use anymore, but that's a strange flex to me.  Then again, I'm a student.-->
 </body>
 
 </html>
