@@ -33,6 +33,13 @@ function printIntrument(){
     document.getElementById("arrayOutput").innerHTML = result;
 }
 
+//I nned to make an object using the const keyword.  It's properties will need to include values.
+const demo = {
+    tool: "leafblower",
+    volumne: "loud"
+}
+//displays a string using .innerHTML that includes a property value of my object 
 function constantFunction(){
-    
+    var message = "You chose a " +demo.tool+ " and it is "+demo.volumne +".";
+    document.getElementById("constantP").innerHTML = message;
 }
