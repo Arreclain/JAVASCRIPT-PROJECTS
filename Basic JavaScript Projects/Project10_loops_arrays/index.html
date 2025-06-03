@@ -6,6 +6,7 @@
     <script src="JS/main.js" defer></script>
 </head>
 
+<!--The body tag is populated by paragraphs that have text printed to them, and buttons that call functions.-->
 <body>
     <p id="loop"></p>
     <button onclick="callLoop()">Click here to execute the loop!</button>
@@ -15,7 +16,7 @@
     <button onclick="forLoop()">Start For Loop</button>
 
     <label for="inputNumber">Selects an instrument from an array.</label>
-    <input type="range" id="instrumentPicker" name="inputNumber" min="0" max="5">
+    <input type="range" id="instrumentPicker" name="inputNumber" min="0" max="5"> <!--I almost forgot.  This slider is the input used to choose which instrument to print from a list.-->
     <button onclick="printIntrument()">Print the Desired Instrument</button>
     <p id="arrayOutput"></p>
     <br>
@@ -23,6 +24,9 @@
     <br>
     <p id="constantP"></p>
     <button onclick="constantFunction()">Click this!</button>
-
+    <h4>Let's make an object!</h4>
+    <button onclick="spendMoney()">Click to build a warehouse!</button>
+    <p id="purchasedLand">Empty Lot</p> <!--This one is also used as a check that you actually made a warehouse.  If it still reads Empty Lot, I kick you out of the method early.-->
+    <button onclick="buyGoods()">Puts goods in the warehouse.</button> <!--Checks the above for a warehouse before running in full.-->
 </body>
 </html>
