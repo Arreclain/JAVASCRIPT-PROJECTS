@@ -26,13 +26,13 @@ function validateForm() {
     //                        The problem section, the Radio Buttons.
 
     //This top one is for id='TelepathForm'
-    alert("Document.forms[0] length = " + document.forms[0].length);  //This returns 4.  There are 3 options.  This is a clue, somehow.
-    for (i = 0; i < document.forms[0].length; i++) {
-        if (document.forms[0][i].checked == true) {  //document.forms[0][i].checked returns undefined.  This is also a problem.
+   // alert("Length of radio button = " + document.getElementsByName("psyApt").length);  //This returns 4.  There are 3 options.  This is a clue, somehow.
+    for (i = 0; i < document.getElementsByName("psyApt").length; i++) {
+        if (document.getElementsByName("psyApt")[i].checked == true) {  //document.forms[0][i].checked returns undefined.  This is also a problem.
             radioUsed = true;
-            alert("Choice number " + i +" was selected.");
+            //alert("Choice number " + i +" was selected.");
         }
-        alert("i = " + i + " and rad[i] = " + document.forms[i].checked);
+        //alert("i = " + i + " and rad[i] = " + document.getElementsByName("psyApt")[i].checked);
     }
     if (radioUsed == false) {
         alert("Please report power type, or unknown if unknown to you.");
@@ -41,15 +41,15 @@ function validateForm() {
 
     rad = document.getElementById("radioQuestion2");  //I know for a fact that my code isn't even getting here.
     radioUsed = false;
-    alert("Radio question 2 length = " + document.forms[1].length);
-    for (i = 0; i < document.forms[1].length; i++) {
-        if (document.forms[i].checked) radioUsed = true;
+    //alert("Length of radio button = " + document.getElementsByName("blipQ").length);
+    for (i = 0; i < document.getElementsByName("blipQ").length; i++) {
+        if (document.getElementsByName("blipQ")[i].checked) radioUsed = true;
     }
     if (radioUsed == false) {
         alert("You MUST report if you were apprehended as a blip.");
         return false;
     }
-
+    return true;
 }
 
 
