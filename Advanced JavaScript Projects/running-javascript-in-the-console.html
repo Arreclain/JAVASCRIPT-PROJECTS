@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RJitC</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <p id="globalVariables" onclick="global()">Global? Do a clicky here!</p>
+    <p id="localVariables" onclick="local()">Local? Do a clicky here!</p>
+    <hr>
+    <p id="concat" onclick="concatenate()">Concat? I'd love to!</p>
+    <hr>
+    <button onclick="newCourse()">Hungry?</button>
+    <p id="displayCourse"></p>
+    <hr>
+
+    <p id="displayAge"></p>
+    <hr>
+    <p class="findMe"></p>
+    <p class="findMe"></p>
+    <p class="findMe"></p>
+    <script>
+        //a and b are global, editable variables that can be changed via console.
+        let a = 3;
+        let b = 4;
+
+        function global() {
+            result = a + b;
+            var z = document.getElementsByClassName("findMe");
+
+            document.getElementById("globalVariables").innerHTML =
+                "Global variable a (" + a + ") + variable b (" + b +
+                ") equals " + result;
+            for (i = 0; i < z.length; i++) {
+                z[i].innerHTML = "I found you!";
+            }
+        }
+
+        function local() {
+            let c = 4;
+            let d = 3;
+            result = c + d;
+            document.getElementById("localVariables").innerHTML =
+                "Local variable a (" + c + ") + variable b (" + d +
+                ") equals " + result;
+        }
+
+        //declares values for sentence1 and sentence2 in the console
+        let sentence1;
+        let sentence2;
+
+        function concatenate() {
+            //Concatenates sentences 1 and 2 using the .concat() method.
+            let concatSent = sentence1.concat(sentence2);
+
+            //displays result on the webpage
+            document.getElementById("concat").innerHTML = concatSent;
+
+            //Display result in the console
+            console.log(concatSent);
+        }
+
+        //Creates a Course object constructor.
+        function Course(Name, Type, Duration) {
+            this.courseName = "Today's new course is " + Name + "<br>";
+            this.courseType = "It is a " + Type + "<br>";
+            this.courseDur = "It is a " + Duration + " course meal.";
+        }
+
+        let sh = new Course("Sequestered Hagfish", "seafood dish", 3);
+        let se = new Course("Sturgeon Extravaganza", "seafood dish", 5);
+
+        //Get user input and calculate the age based on the year.
+        let year = prompt("Type in the year you were born");
+        let yearNow = new Date().getFullYear();
+        let age = Math.floor(yearNow - year);
+
+    </script>
+</body>
+
+</html>

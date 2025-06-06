@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <script src="JavaScript/JavaScript_1.js" defer></script>
-    </head>
-    <body>
-        <h3>Input the rolled number</h3>
-        <input type="range" id="battleMap" name="inputNumber" min="0" max="5">
-        <button onclick="battleMapTxt()">Display Game Type</button>
-        <p id="battleTxtArea"></p>
-    </body>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="JavaScript/JavaScript_1.js" defer></script>
+</head>
+
+<body>
+    <h3>Input the rolled number</h3>
+    <input type="range" id="battleMap" name="inputNumber" min="0" max="5">
+    <button onclick="battleMapTxt()">Display Game Type</button>
+    <p id="battleTxtArea"></p>
+    <hr>
+    <canvas id="canvas1" width="40px" height="40px" style="border:1px solid #3f3f3f;"></canvas>
+
+    <button onclick="paintFlag()">Make a Simple Flag</button>
+</body>
+
 </html>

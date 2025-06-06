@@ -46,3 +46,31 @@ function battleMapTxt() {
             break;
     }
 }
+    //The Canvas Section
+    //
+
+    const c = document.getElementById("canvas1");
+    const cDimensions = c.getContext("2d");
+
+    function paintFlag(){
+
+   // cDimensions.fillRect(0,0,c.width,c.height);
+   // cDimensions.fillStyle = "red";  //I have done everything besides ask an instructor to try to make this red, and it refuses.
+   // cDimensions.fill();
+    cDimensions.fillStyle = "white";
+    cDimensions.moveTo(0,20);
+    cDimensions.lineTo(40,20);
+    cDimensions.stroke();
+    cDimensions.moveTo(20,0);
+    cDimensions.lineTo(20,40);
+    cDimensions.stroke();
+    cDimensions.fillRect(20,20,c.width,c.height);
+    cDimensions.fillStyle = "red";  //What is wrong with the colors???
+    cDimensions.fill();
+
+    var grade = cDimensions.createLinearGradient(0,0,20,20);
+    grade.addColorStop(0,"red");
+    grade.addColorStop(1,"black");
+    cDimensions.fillStyle = grade;
+    cDimensions.fillRect(0,0,20,20);
+    }
