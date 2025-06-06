@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="CSS/CSS_1.css">
+    <script src="JavaScript/JavaScript_2.js" defer></script>
+</head>
+
+<body>
+    <!--These first two divs style the document.-->
+    <div id="wrapper">
+        <div class="legal-info">
+            <!--Just legal text for the poor psychic to read.-->
+            <h1>PsiCorp Registration Form</h1>
+            <h3>All information provided must be accurate to the best of your knowledge.</h3>
+            <h3>Failure to answer truthfully will result in punishment as per EarthForce law.</h3>
+            <h5>You may opt out at any time. By doing so, you relinquish all rights to your psychic powers and express
+                compliance to the administration of power suppressing drugs, colloquially known as "sleepers." Failure
+                to
+                appear for drug appointments will result in punishment as per EarthForce law.</h5>
+        </div>
+        <!--Start of the form.-->
+        <div id="registration"> <!--Organizes the contents.-->
+            <form id="registrationForm" required> <!--"Required" Is supposed to help validate the form  : /-->
+                <table> <!--Organizes the inputs-->
+                    <tr>
+                        <td><label for="firstName">First name: </label></td>
+                        <td><label for="lastName">Last name:</label></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="firstName" class="textField" required></td>
+                        <td><input type="text" name="lastName" class="textField" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="scroll">Home Planet/Station </label></td>
+                        <td><label for="regionTxt">Home Region</label></td>
+                    </tr>
+                    <td><select type="text" name="scroll" id="scroll" required>
+                            <!--"Please Choose... should be an invalid default option.-->
+                            <option value="noChoiceMade">Please Choose...</option>
+                            <option value="b5">Babylon 5 Station</option>
+                            <option value="ea">Earth</option>
+                            <option value="mr">Mars</option>
+                            <option value="or">Orion A</option>
+                            <option value="or">Orion B3</option>
+                            <option value="pr">Proxima</option>
+                            <option value="io">Io</option>
+                            <option value="sl">Sh'Lassa</option>
+                        </select></td>
+                    <td><input type="text" name="regionTxt" class="textField" required></td>
+                    </tr>
+                </table>
+                </form>
+                <form id="telepathyForm">
+                <br>
+                <label for="psyRating">What is your rating as a telepath?</label><br>
+                <input type="number" id="psyRating" name="psyRating" min="1" max="15"><br>
+                <br>
+                <label for="psyApt">Are are the nature of your powers?</label><br>
+                <input type="radio" id="teep" name="psyApt" value="teep">
+                <label for="teep">Telepath</label><br>
+                <input type="radio" id="teek" name="psyApt" value="teek">
+                <label for="teek">Telekinetic</label><br>
+                <input type="radio" id="unknown" name="psyApt" value="unknown">
+                <label for="unknown">Other / Untested for Telekinesis</label>
+            </form>
+            <br>
+            <form id="delinquencyForm" name="radioQuestion2" required>
+                <label for="isABlip">Were you arrested as an unregistered telepath, also known as a blip?</label><br>
+                <input type="radio" id="isABlip" name="yesBlip" value="isABlip">
+                <label for="isABlip">Yes</label><br>
+                <input type="radio" id="isNotABlip" name="noBlip" value="isNotABlip">
+                <label for="isNotABlip">No</label><br>
+            </form>
+            <br>
+            <button type="submit" value="submit" onclick="submitForm()">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>
