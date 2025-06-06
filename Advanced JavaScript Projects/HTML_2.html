@@ -51,12 +51,14 @@
                     <td><input type="text" name="regionTxt" class="textField" required></td>
                     </tr>
                 </table>
-                </form>
-                <form id="telepathyForm">
+            </form>
+            <form id="psyRatingForm">
                 <br>
                 <label for="psyRating">What is your rating as a telepath?</label><br>
                 <input type="number" id="psyRating" name="psyRating" min="1" max="15"><br>
-                <br>
+            </form>
+            <form id="telepathyForm">
+                <br> <!--This is the first radio button-->
                 <label for="psyApt">Are are the nature of your powers?</label><br>
                 <input type="radio" id="teep" name="psyApt" value="teep">
                 <label for="teep">Telepath</label><br>
@@ -67,6 +69,7 @@
             </form>
             <br>
             <form id="delinquencyForm" name="radioQuestion2" required>
+                <!--This is the second radio button-->
                 <label for="isABlip">Were you arrested as an unregistered telepath, also known as a blip?</label><br>
                 <input type="radio" id="isABlip" name="yesBlip" value="isABlip">
                 <label for="isABlip">Yes</label><br>
