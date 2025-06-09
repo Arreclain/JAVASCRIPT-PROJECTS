@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+       <!-- <script src="JS/javascript.js" defer></script> -->
+    </head>
+    <body>
+        <script>
+            function lessSpeed(){
+               document.getElementById("target").innerHTML += speed();
+            }
+            speed = () => "speed?  I am speed!";
+        </script>
+        <p id="target" onclick="lessSpeed()">The sound card is...
+        </p>
+    </body>
+</html>
