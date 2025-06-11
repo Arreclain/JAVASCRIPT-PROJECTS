@@ -14,11 +14,11 @@ function placeXOrO(squareNumber) {
         //This condition checks who's turn it is.
         if (activePlayer === 'X') {
             //If activePlayer is equal to 'X', the x.png is placed in html.
-            select.style.backgroundImage = 'url("images/x.png")';
+            select.style.backgroundImage = 'url("images/X-Token.png")';
             //Active player may only be X or O, so, if not X, then O.
         } else {
             //If activePlayer is equal to O, the o.png is placed in html.
-            select.style.backgroundImage = 'url("images/o.png")';
+            select.style.backgroundImage = 'url("images/O-Token.png")';
         }
         //squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
@@ -34,7 +34,7 @@ function placeXOrO(squareNumber) {
             activePlayer = 'X';
         }
         //This function plays placement sound.
-        audio('./media/place.mp3');
+        audio('./media/plonk.wav');
         //This condition checks to see if it is the computer's turn.
         if (activePlayer === 'o') {
             //This function disables clicking for computer's turn.
@@ -104,7 +104,7 @@ function checkWinConditions() {
     //This condition checks for a tie.  If none of the above are true and all squares full, it triggers.
     else if (selectedSquares.length >= 9) {
         //This function plays the tie game sound.
-        audio('./media/tie.mp3');
+        audio('./media/tieFinal.wav');
         //This function sets a .3 second timer before the resetGame is called.
         setTimeout(function () { resetGame(); }, 500);
     }
@@ -203,7 +203,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     //This line disallows clicking while the win sound is playing.
     disableClick();
     //This line plays the win sounds.
-    audio('./media/winGame.mp3');
+    audio('./media/winGameFinal.wav');
     //This line calls our main animation loop.
     animateLineDrawing();
     //This line waits 1 second, then clears the canvas, resets the game, and reallows clicking.

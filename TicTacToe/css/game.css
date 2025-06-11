@@ -9,9 +9,9 @@
 }
 
 h1 {
-    margin: auto;
-    width: 608px;
-    color: darkslateblue;
+    margin: auto;  /*This keeps our header lined up with the left hand edge of the play space.*/
+    width: 608px;  /*Exactly the same width as the play space to prevent overhang.*/
+    color: darkslateblue;  /*It's pretty.*/
 }
 
 table {
