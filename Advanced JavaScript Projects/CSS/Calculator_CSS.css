@@ -1,0 +1,99 @@
+html {
+    font-size: 70%;
+    box-sizing: border-box;
+}
+
+/*Applies to all.*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/*Applies to everything below the Header*/
+.calculator {
+    border: 1.2px solid darkslategray;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+}
+
+/*Styles the "Screen" area at the top where data is displayed.*/
+.calculator-screen {
+    width: 100%;
+    font-size: 5rem;
+    height: 80px;
+    border: none;
+    background-color: rgb(15, 15, 15);
+    color: rgb(240, 240, 240);
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 7px 7px 0px 0px;
+}
+
+/*Styles the buttons, all of them, with low specificity.*/
+button {
+    height: 70px;
+    border-radius: 3px;
+    border: 1px solid darkslategray;
+    background-color: transparent;
+    font-size: 3.2rem;
+    color: rgb(15, 15, 15);
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.6));
+    text-shadow: 0 1px rgba(240, 240, 240, .4);
+    /*Each value is separated by a comma after the rgba values*/
+    box-shadow: inset 0 0 0 1px rgba(240, 240, 240, .05),
+        inset 0 1px 0 0 rgba(240, 240, 240, .05),
+        inset 0 -1px 0 0 rgba(240, 240, 240, .05),
+        0 1px 0 0 rgba(240, 240, 240, .05);
+}
+
+/*If hover over button, do:*/
+button:hover {
+    background-color: #e1e1e1;
+}
+
+/*Specifically for the opeator keys "+ - * &/ =" */
+.operator {
+    color: rgb(15, 15, 15);
+    background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.5));
+    background-color: lightgrey;
+}
+
+/*All Clear is a specific button, labeled AC.*/
+.all-clear {
+    background-color: red;
+    border-color: darkslategray;
+    color: #dadada;
+}
+
+/*Equals Sign is styled below.*/
+.equal-sign {
+    background-color: rgb(15, 15, 240);
+    border-color: darkslategray;
+    color: #dadada;
+    height: 100%;
+    grid-area: 2/4/6/5;
+    /*I think this allows the equals sign button to take up more room.*/
+}
+
+/*Hover Effect for the Equals Sign*/
+.equal-sign:hover {
+    background-color: rgb(0, 90, 90);
+}
+
+/*I this applies to the div that holds the keys themselves.*/
+.calculator-keys {
+    display: grid;
+    /*Which is what the 'grid-area' the equals sign key has references.*/
+    grid-template-columns: repeat(4, 1fr);
+    /*IDK what 1fr means, but the other one is likely the squares per row.*/
+    grid-gap: 20px;
+    padding: 20px;
+}
