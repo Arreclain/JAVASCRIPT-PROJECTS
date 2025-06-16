@@ -106,7 +106,7 @@ keys.addEventListener('click', (event) => {
         return;
     }
     if(target.classList.contains('decimal')){ //   console.log("target.Value = "+target.Value);
-        Input_Decimal(target.Value);
+        Input_Decimal(target.value);
         Update_Display();
         return;
     }
