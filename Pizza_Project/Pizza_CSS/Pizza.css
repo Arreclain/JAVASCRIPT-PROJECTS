@@ -1,0 +1,115 @@
+/*Lato Font imported from fonts.google.com*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+#menuBG {
+    /*Holds all the divs*/
+    width: 400px;
+    height: 470px;
+    margin: 10px auto;
+}
+
+#frmMenu {
+    /*I origionally made this a flexbox so I could arrange the size and toppings.*/
+    /*This worked really well, actually.  Right until I needed to add the price readout.*/
+    /*Which always hung out to the right of everything.*/
+    /*display: flex;*/
+    width: 600px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#totalPrice {
+    /*This is for the total price div that appears after the total is summed.*/
+    width: 200px;
+    height: 190px;
+    margin: 0 auto;
+    /*justify-content: right; */
+    float: right;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    /*justify-content: left;*/
+    float: left;
+}
+
+.center {
+    width: 200px;
+    height: 200px;
+    /*justify-content: center;*/
+    float: left;
+    /*I really dislike that this is the solution, 
+            but it works, and who am I to complain.*/
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    /*justify-content: right;*/
+    float: right;
+}
+
+#showText {
+    /*Tells you which size and toppings you picked.  A subelement of cart.*/
+    width: 200px;
+    height: 190px;
+    margin: 0px auto;
+    /*justify-content: left;*/
+    float: left;
+}
+
+#cart {
+    /*So, this is the reason I had to look up an answer.  
+    I kept trying to position it below, but it was either resisting being moved
+    or crushing my columns together.*/
+    display: block;
+    /*flex-wrap: wrap;
+    flex-direction: column;*/
+    top: 0;
+    margin: 0px auto;
+    width: 400px;
+    height: 200px;
+}
+
+#btnOrder {
+    margin: 10px 0px 0px 100px;
+    width: 100px;
+    height: 40px;
+    /*There was no semicolon at the end here
+     in the original version at the end of the height element, 
+    and that's how bad ghosts get into your code.  So I added one.*/
+}
+
+/*Down here was the requested additional content, 
+so I have a note in each for what I needed to add.*/
+
+body {
+    /*Background color*/
+    background-color: blanchedalmond;
+}
+
+h1 {
+    /*font family and color*/
+    font-family: "Lato", sans-serif;
+    /*Font imported from fonts.google.com*/
+    font-weight: 400;
+    font-style: normal;
+    color: darkred;
+}
+
+h3 {
+    /*font family and color*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: firebrick;
+}
+
+div {
+    /*font family and color*/
+    font-family: "Lato", sans-serif;
+    /*Font imported from fonts.google.com*/
+    font-weight: 400;
+    font-style: normal;
+    color: brown;
+}
