@@ -53,7 +53,15 @@ h3 {
 
 .car-title {
     font-size: 30px;
-    display: none;
+    display: none; /*Hides car image files for show and hide jQuery effect.*/
+}
+
+img {
+    width: 100%; /*Takes up 100% of the space in each column.*/
+    height: auto;
+    cursor: pointer;
+    box-shadow: 20px 20px 20px -9px rgba(60, 60, 60, 0.35),
+        10px 10px 10px -9px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -75,28 +83,20 @@ h3 {
     margin: 40px;
 }
 
-img {
-    width: 100%;
-    height: auto;
-    cursor: pointer;
-    box-shadow: 20px 20px 20px -9px rgba(60, 60, 60, 0.35),
-        10px 10px 10px -9px rgba(0, 0, 0, 0.5);
-}
-
 .faq {
     width: 80%;
     padding: 50px 100px 100px;
-    border: 2px solid black;
+    border: 3px solid black;
     margin-bottom: 250px;
 }
 
 .question {
-    padding: 5px 20px;
-    border-bottom: 1px solid black;
+    padding: 50px 20px;
+    border-bottom: 1px solid black; /*Seperates each question*/
     cursor: pointer;
 }
 
 .answer {
-    display: none;
+    display: none; /*Hides FAQ answer until prompted.*/
     padding: 40px 20px;
 }
